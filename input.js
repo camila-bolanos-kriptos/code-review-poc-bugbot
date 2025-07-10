@@ -29,3 +29,8 @@ console.log("Este mensaje debería eliminarse en producción");
 
 // 🔥 6. Variable no usada
 const secret = "123456789";  // ❌ Declarada pero no usada
+
+// 🔥 Código vulnerable agregado a propósito para test de BugBot
+const userInput = process.argv[3];
+eval(userInput); // 🚨 Eval con input externo, muy inseguro
+
